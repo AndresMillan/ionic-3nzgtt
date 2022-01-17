@@ -19,8 +19,7 @@ export class HomePage {
         `https://g.tenor.com/v1/search?q=excited&key=LIVDSRZULELA&limit=8`
       )
       .subscribe((resp: { data: any }) => {
-        this.data = resp.data;
-        console.log(this.data);
+        this.data = JSON.parse(resp.data);
       });
   }
 
