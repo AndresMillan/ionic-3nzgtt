@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img
+    #thisImage
+    src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+    failedUrl="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+    (error)="missingImage(thisImage.attributes.failedUrl.value)"
+    onerror="this.src='https://via.placeholder.com/150'"
+  />
+	<img
+	#thisImage
+	src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+	failedUrl="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+	(error)="missingImage(thisImage.attributes.failedUrl.value)"
+	onerror="this.src='https://via.placeholder.com/150'"
+/>
+</ion-content>
